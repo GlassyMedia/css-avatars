@@ -84,7 +84,7 @@
   @primaryColor: rgb(@red, @green, @blue);
   @secondaryColor: contrast(@primaryColor, @color-dark, @color-light);
   .avatar-color-@{i} {
-    background-color: @primaryColor;
+    background-color: desaturate(@primaryColor, 30%);
     .font-color-mixin(@secondaryColor);
   }
   .generate-colors(@n, (@i + 1));
